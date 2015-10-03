@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register yourself</title>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+    <style media="screen">
+      fieldset{
+        background: lightyellow;
+        border: 10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+      }
+
+      label{
+        width: 180px;
+        display: inline-block;
+        text-align: right;
+      }
+
+
+      label:hover{
+        font-size: 40px;
+      }
+
+      input:hover{
+        height: 40px;
+      }
+
+      textarea{
+        width: 360px;
+        height: 50px;
+      }
+
+      span{
+        width: auto;
+      }
+
+      .sliderText{
+        text-align: center;
+        color: white;
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 50px;
+      }
+
+      .left{
+        background: red;
+      }
+
+      .right{
+        background: purple;
+      }
+
+      input{
+        margin-bottom: 3px;
+        width: 180px;
+      }
+
+      input[type="checkbox"], input[type="radio"]{
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Register!</h1>
+    <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Your face</legend>
+        <label for="profilepic">Your image:</label>
+        <input type="file" id="profilepic" name="profilepic" required><br>
+        <label>Image preview:</label>
+        <img id="preview">
+      </fieldset>
+
+      <fieldset>
+        <legend>Your general details</legend>
+        <label for="userName">Name:</label>
+        <input type="text" name="userName" placeholder="Your full name" required><br>
+        <label for="gender" id="radioButton">Gender:</label>
+        <input name="gender" type="radio" value="Male" required><span>Male</span>
+        <input name="gender" type="radio" value="Female" required><span>Female</span><br>
+        <label for="age">Age:</label>
+        <input name="age" type="number" required><br>
+        <label for="dob">Date of birth:</label>
+        <input name="dob" type="date" required><br>
+        <label for="favColor">Favourite color:</label>
+        <input name="favColor" type="color"><br>
+        <label for="country">Which country:</label>
+        <select name="country">
+          <option selected disabled hidden value=""></option>
+          <option value="India">India</option>
+          <option value="China">China</option>
+          <option value="USA">USA</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Japan">Japan</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your indicators</legend>
+        <label for="height">Height:</label>
+        <span class="sliderText left">Short</span><input type="range" min="0" max="100" name="height"><span class="sliderText right">Tall</span><br>
+        <label for="salary">Salary:</label>
+        <span class="sliderText left">Poor</span><input type="range" min="0" max="100" name="salary"><span class="sliderText right">Rich</span>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="email">Email: </label>
+        <input type="email" name="email" required><br>
+        <label for="telephone">Mobile: </label>
+        <input type="tel" name="telephone"><br>
+        <label for="address">Address: </label>
+        <textarea name="address"></textarea><br>
+        <label for="contactMethod">Method to contact you:</label>
+        <input type="checkbox" name="contactMethod" value="email"><span>Email</span>
+        <input type="checkbox" name="contactMethod" value="whatsapp"><span>Whatsapp</span>
+        <input type="checkbox" name="contactMethod" value="inappchat"><span>In-app chat</span>
+      </fieldset>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
